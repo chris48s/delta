@@ -62,6 +62,7 @@ make_deb() {
 
     homepage="https://github.com/dandavison/delta"
     maintainer="Dan Davison <dandavison7@gmail.com>"
+    copyright_years="2019 - "$(date "+%Y")
 
     case $TARGET in
         x86_64*)
@@ -116,7 +117,7 @@ Upstream-Name: $PROJECT_NAME
 Source: $homepage
 
 Files: *
-Copyright: $maintainer
+Copyright: $copyright_years $maintainer
 License: MIT
 
 License: MIT
