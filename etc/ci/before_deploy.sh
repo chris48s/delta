@@ -153,6 +153,8 @@ Description: A syntax highlighter for git.
 EOF
 
     fakeroot dpkg-deb --build "$tempdir" "${dpkgname}_${version}_${architecture}.deb"
+    sudo apt-get install -qq --no-install-recommends lintian
+    lintian "${dpkgname}_${version}_${architecture}.deb"
 }
 
 
