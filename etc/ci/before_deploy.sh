@@ -104,6 +104,7 @@ make_deb() {
     # copy the main binary
     install -Dm755 "target/$TARGET/release/$PROJECT_NAME" "$tempdir/usr/bin/$PROJECT_NAME"
     "${gcc_prefix}"strip "$tempdir/usr/bin/$PROJECT_NAME"
+    ls -R "target/$TARGET/release/$PROJECT_NAME"
 
     # Work out shared library dependencies
     # dpkg-shlibdeps requires debian/control file. Dummy it and clean up
